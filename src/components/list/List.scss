@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.task-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--white-1) !important;
+
+  &:hover {
+    background-color: #5b6470;
+  }
+}

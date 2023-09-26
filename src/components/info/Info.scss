@@ -1,0 +1,10 @@
+@import '../../index.scss';
+
+button {
+  cursor: help;
+
+  svg {
+    pointer-events: none;
+    color: var(--white-1);
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../index.scss';
+
+.card-app {
+  background-color: var(--main-background);
+  border-radius: 4px;
+  width: 100%;
+  min-width: 400px;
+  min-height: 350px;
+}

@@ -1,0 +1,27 @@
+:root {
+  --pink-1: #f06292;
+  --pink-2: #e55c8a;
+  --main-background: #3c424a;
+  --dark-gray-1: #3c424a;
+  --dark-gray-2: #343a40;
+  --gray-1: #777d86;
+  --gray-2: #5b6470;
+  --white-1: #e1eaf2;
+  --light-blue-2: #d3dee9: // Hover nav
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(160deg, #f06292 50%, #e55c8a 50%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input:focus {
+  color: var(--dark-gray-1) !important;
+}

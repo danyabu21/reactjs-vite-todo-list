@@ -1,0 +1,39 @@
+@import '../../../index.scss';
+
+.button {
+  color: var(--white-1);
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  &:hover {
+    svg {
+      color: var(--pink-2);
+    }
+  }
+}
+
+.task-item {
+  transition: 0.3s all;
+  &:hover {
+    background-color: var(--gray-2);
+  }
+}
+
+p {
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.completed {
+  background-color: hsl(152, 69%, 31%) !important;
+
+  &:hover {
+    background-color: hsla(152, 69%, 31%, 0.5) !important;
+  }
+}
