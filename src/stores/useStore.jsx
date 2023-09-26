@@ -108,12 +108,15 @@ const useStore = create((set, get) => {
 
       recoveryDeletedTask: (id) => {
         setState(({ state }) => {
-          state.tasks.push(
-            ...state.removedTasks.filter((task) => (task.id = id))
-          );
-          state.removedTasks = state.removedTasks.filter(
-            (task) => task.id !== id
-          );
+          let removedTask;
+          state.removedTasks = state.removedTasks.filter((task) => {
+            if (task.id === id) {
+              removedTask = task;
+            } else {
+              return task;
+            }
+          });
+          state.tasks = [...state.tasks, removedTask];
         });
       },
     },

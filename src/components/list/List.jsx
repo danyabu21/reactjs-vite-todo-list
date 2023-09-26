@@ -22,22 +22,24 @@ function List() {
 
   return (
     <ul className="list-unstyled">
-      {filterValue === 'incompleted' && renderIncompletedTasks.length === 0 ? (
+      {filterValue === 'incompleted' && renderIncompletedTasks.length === 0 && (
         <Info
           label="There are no incomplete tasks"
           content="All incomplete tasks will apper here."
         />
-      ) : (
-        renderIncompletedTasks
       )}
-      {(filterValue === 'completed' && renderCompletedTasks.length) === 0 ? (
+      {filterValue === 'incompleted' &&
+        renderIncompletedTasks.length > 0 &&
+        renderIncompletedTasks}
+      {filterValue === 'completed' && renderCompletedTasks.length === 0 && (
         <Info
           label=" There are no complete tasks"
           content="All completed tasks will appear here"
         />
-      ) : (
-        renderCompletedTasks
       )}
+      {filterValue === 'completed' &&
+        renderCompletedTasks.length > 0 &&
+        renderCompletedTasks}
     </ul>
   );
 }
